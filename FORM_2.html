@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>STUDENT SIGN-UP PAGE</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f9f9f9;
+                margin: 0;
+                margin-top: 20px;
+                margin-right: 200px;
+                margin-left: 200px;
+                background-image: url('Image.jpg');
+            }
+
+            h1 {
+                text-align: center;
+                color: bisque;
+            }
+
+            form {
+                display: flex;
+                flex-direction: column;
+                background-color: blueviolet;
+                padding: 20px;
+                border-radius: 10px;
+                color: white;
+            }
+
+            label {
+                font-weight: bold;
+                margin-bottom: 5px;
+            }
+
+            input, select, textarea, button {
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                font-size: 1rem;
+                margin-bottom: 15px;
+            }
+
+            input:focus, select:focus, textarea:focus {
+                border-color: #007bff;
+                outline: none;
+            }
+
+            button {
+                background: #007bff;
+                color: #fff;
+                border: none;
+                cursor: pointer;
+                transition: background 0.3s;
+                padding: 10px;
+                border-radius: 5px;
+                font-size: 1rem;
+            }
+
+            button:hover {
+                background: #0056b3;
+            }
+
+            p {
+                margin: 0;
+            }
+
+            input[type="radio"], input[type="checkbox"] {
+                width: auto;
+                margin-right: 10px;
+            }
+        </style>
+    </head>
+    <body background-image="image.jpg">
+        <form action="FORM_2.php" method="POST" enctype="multipart/form-data">
+            <h1>STUDENT SIGN-UP PAGE</h1>
+
+            <label for="nm">Names</label>
+            <input type="text" name="nm" id="nm" required>
+
+            <label for="num">Student ID number</label>
+            <input type="number" id="num" name="id_number" required>
+
+            <h1>Gender</h1>
+            <label for="ml">Male</label>
+            <input type="radio" id="ml" name="gender" value="Male">
+            <label for="fm">Female</label>
+            <input type="radio" id="fm" name="gender" value="Female" required>
+
+            <label for="dob">Date of Birth</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <label for="country">Country</label>
+            <select id="country" name="country" required>
+                <option value="" disabled selected>Select your country</option>
+                <option value="Rw">Rwanda</option>
+                <option value="Buja">Burundi</option>
+                <option value="can">Canada</option>
+                <option value="us">USA</option>
+                <option value="Fr">France</option>
+            </select>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your Email" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" minlength="10" maxlength="20" required>
+            
+            <h2>Level of Education Completed</h2>
+            <label for="Nurs">Nursery</label>
+            <input type="checkbox" id="Nurs" name="education[]" value="Nursery">
+            <label for="Pri">Primary</label>
+            <input type="checkbox" id="Pri" name="education[]" value="Primary">
+            <label for="Lowers">O'Level</label>
+            <input type="checkbox" id="Lowers" name="education[]" value="O'Level">
+
+            <label for="bio">Short Bio</label>
+            <textarea id="bio" name="bio" rows="4" placeholder="Write something about yourself"></textarea>
+            <label for="tm">Time of submission</label>
+            <input type="time" id="tm" name="appointment_time">
+            <label for="rs">Reset</label>
+            <input type="reset" id="rs" name="reset">
+            <button type="submit" name="submit">Submit</button>
+        </form>
+    </body>
+</html>
